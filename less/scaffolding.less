@@ -77,6 +77,11 @@ button {
 	cursor: pointer;
 }
 
+.subtitle {
+  font-size: 20px;
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6,
 .title,
 .title-2, 
@@ -90,10 +95,24 @@ h1, h2, h3, h4, h5, h6,
 
 h1,
 .title {
+  position: relative;
+  margin-bottom: 28px;
+  padding-bottom: 40px;
   text-align: center;
   font-size: 48px;
   line-height: 1;
   letter-spacing: 0.05em;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 119px;
+    height: 6px;
+    background-color: #A68563;
+  }
 }
 
 h2,
