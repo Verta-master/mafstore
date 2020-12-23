@@ -1,0 +1,95 @@
+.header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(51,50,49,0.2);
+}
+
+.header__logo,
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__slogan {
+  margin-left: 26px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.header__call {
+  position: relative;
+  padding-left: 50px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/phone.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.header__phone {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @brown;
+    .transition();
+  }
+}
+
+.header__order {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #A68563;
+  
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.header__basket {
+  position: relative;
+  padding-right: 20px;
+  
+  svg {
+    stroke: @black;
+  }
+}
+
+.header__number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  border-radius: 50%;
+  background-color: #A68563;
+}
