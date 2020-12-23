@@ -18,8 +18,8 @@ var enableSwiper = function() {
     simulateTouch: false,
     preventClicks: false,
     preventClicksPropagation: false,
-    slidesPerView: 2,
-    spaceBetween: 20,
+    slidesPerView: 4,
+    spaceBetween: 30,
     breakpoints: {
       1170: {
         slidesPerView: 3,
