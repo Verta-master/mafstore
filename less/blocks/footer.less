@@ -1,0 +1,175 @@
+.footer {
+  color: #fff;
+  background-color: #333231;
+}
+
+.footer__bottom,
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom {
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 14px;
+  border-top: 1px solid rgba(134,149,173,0.2);
+  
+  span {
+    opacity: 0.5;
+  }
+}
+
+.footer__top {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.footer__logo {
+  width: 310px;
+  max-width: 100%;
+  
+  .logo {
+    margin-bottom: 27px;
+    margin-left: -20px;
+  }
+}
+
+.footer__contacts {
+  width: 213px;
+}
+
+.footer__slogan {
+  margin-bottom: 26px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  opacity: 0.5;
+}
+
+.footer__text {
+  margin-bottom: 45px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.5;
+}
+
+.footer__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__list {
+  .reset();
+  list-style: none;
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #F2EEE8;
+    
+    a:hover,
+    a:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer__tel {
+  display: block;
+  margin-bottom: 14px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 24px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @brown;
+    .transition();
+  }
+}
+
+.footer__call {
+  width: 180px;
+  margin-top: 18px;
+  background-color: rgba(255,255,255,0);
+  
+  span {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  
+  i {
+    margin-right: 19px;
+    font-size: 14px;
+  }
+}
+
+.footer__address {
+  .reset();
+  list-style: none;
+  margin-top: 51px;
+}
+
+.footer__location {
+  margin-bottom: 19px;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: #F2EEE8;
+  
+  a {
+    display: block;
+    opacity: 0.5;
+    
+    &:hover,
+    &:active {
+      text-decoration: underline;
+      color: #fff;
+      opacity: 1;
+    }
+  }
+  
+  span {
+    opacity: 0.5;
+  }
+  
+  .title-4 {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 9px;
+    color: #fff;
+    opacity: 1;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 13px;
+      height: 15px;
+      background-image: url(../img/icons/address.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+    
+    .title-4::before {
+      width: 14px;
+      background-image: url(../img/icons/email.svg);
+    }
+  }
+}

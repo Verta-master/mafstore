@@ -1,0 +1,24 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.social__item {
+  margin-left: 23px;
+  opacity: 0.5;
+  .transition();
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+    .transition();
+  }
+}
+
+.social__link {
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+}

@@ -43,4 +43,27 @@
       .transition();
     }
   }
+  
+  &--border {
+    color: @brown;
+    background-color: rgba(255,255,255,1);
+    .transition();
+    
+    &::after {
+      display: none;
+    }
+    
+    &:hover,
+    &:active {
+      color: #fff;
+      background-color: #A68563;
+      .transition();
+    }
+  }
+  
+  &--top {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
