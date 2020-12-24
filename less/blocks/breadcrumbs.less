@@ -1,0 +1,29 @@
+.breadcrumbs {
+  font-size: 20px;
+  text-align: center;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.breadcrumbs__link {
+  font-weight: 700;
+}
+
+a.breadcrumbs__link {
+  margin-right: 10px;
+  
+  &::after {
+    content: "/";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
