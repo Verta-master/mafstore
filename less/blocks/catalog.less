@@ -13,6 +13,9 @@
   box-sizing: border-box;
   height: auto;
   width: 270px;
+  min-height: 439px;
+  display: flex;
+  flex-direction: column;
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: #FAFAFA;
@@ -83,14 +86,28 @@
 }
 
 .catalog__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
+  padding-top: 25px;
   font-size: 14px;
+  
+  p {
+    margin-top: 0;
+  }
+  
+  .title-4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .catalog__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .catalog__price {
