@@ -1840,11 +1840,56 @@ h4,
   position: relative;
   border-bottom: 1px solid rgba(51, 50, 49, 0.1);
 }
+.sidebar__item:hover .sidebar__link {
+  color: #A68563;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.sidebar__item:hover .sidebar__arrow svg {
+  stroke: #A68563;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.sidebar__item:hover .sidebar__drop {
+  display: block;
+}
+.sidebar__drop {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  z-index: 100;
+  left: 100%;
+  top: 0;
+  width: 270px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 15px 16px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 15px 16px rgba(0, 0, 0, 0.15);
+}
+.sidebar__drop li {
+  border-bottom: 1px solid rgba(51, 50, 49, 0.1);
+}
+.sidebar__drop li a {
+  display: block;
+  padding: 20px;
+  padding-bottom: 19px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.sidebar__drop li a:hover,
+.sidebar__drop li a:active {
+  color: #A68563;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
 .sidebar__link {
   display: block;
   padding-top: 20px;
   padding-bottom: 19px;
   padding-right: 40px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .sidebar__arrow {
   position: absolute;
@@ -1857,6 +1902,8 @@ h4,
 }
 .sidebar__arrow svg {
   stroke: #333231;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .filter {
   margin-bottom: 30px;
@@ -1882,6 +1929,101 @@ h4,
   text-transform: uppercase;
   color: #22272E;
 }
+.filter__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.filter__field {
+  position: relative;
+}
+.filter__field::before {
+  content: "от";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 11px;
+  color: #98ACB2;
+  line-height: 40px;
+}
+.filter__field:last-child::before {
+  content: "до";
+}
+.filter__input {
+  display: block;
+  width: 105px;
+  height: 40px;
+  padding-left: 35px;
+  color: #242B33;
+  border: 1px solid rgba(51, 50, 49, 0.1);
+}
 .filter__range {
   margin-bottom: 50px;
+  /* Ползунок */
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  /* позиционируем ползунки */
+  /* оформление полосы по которой ходит ползунок */
+  /* оформление активного участка (между двумя ползунками) */
+  /* скругление для полосы слайдера */
+}
+.filter__range .ui-slider {
+  position: relative;
+}
+.filter__range .ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #A68563;
+  border: 1px solid rgba(51, 50, 49, 0.5);
+  cursor: pointer;
+  outline: none;
+}
+.filter__range .ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  overflow: hidden;
+}
+.filter__range .ui-slider-horizontal {
+  height: 6px;
+}
+.filter__range .ui-slider-horizontal .ui-slider-handle {
+  top: -6px;
+  margin-left: -8px;
+}
+.filter__range .ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.filter__range .ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.filter__range .ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+.filter__range .ui-widget-content {
+  border: 1px solid rgba(51, 50, 49, 0.2);
+  background-color: rgba(51, 50, 49, 0.2);
+}
+.filter__range .ui-widget-header {
+  border: 1px solid #A68563;
+  background-color: #A68563;
+}
+.filter__range .ui-corner-all {
+  border-radius: 5px;
+}
+.filter__range .ui-widget.ui-widget-content {
+  border: 0;
 }

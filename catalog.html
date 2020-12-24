@@ -148,12 +148,22 @@
               <button type="button" class="sidebar__arrow">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11"></path></svg>
               </button>
+              <ul class="sidebar__drop">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+              </ul>
             </li>
             <li class="sidebar__item">
               <a href="#" class="sidebar__link">Стулья</a>
               <button type="button" class="sidebar__arrow">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11"></path></svg>
               </button>
+              <ul class="sidebar__drop">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+              </ul>
             </li>
             <li class="sidebar__item">
               <a href="#" class="sidebar__link">Тумбы</a>
@@ -222,8 +232,12 @@
           <p class="filter__title">Отбор по цене</p>
           <p class="filter__subtitle">Цена</p>
           <div class="filter__data">
-            <input type="text" id="amount-min" class="filter__input">
-            <input type="text" id="amount-max" class="filter__input">
+            <div class="filter__field">
+              <input type="text" id="amount-min" class="filter__input">
+            </div>
+            <div class="filter__field">
+              <input type="text" id="amount-max" class="filter__input">
+            </div>
           </div>
           <div class="filter__range">
             <div id="slider-range"></div>
