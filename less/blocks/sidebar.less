@@ -1,0 +1,46 @@
+.sidebar {
+  width: 270px;
+}
+
+.sidebar__title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1;
+  border-bottom: 4px solid @brown;
+}
+
+.sidebar__list {
+  .reset();
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.sidebar__item {
+  position: relative;
+  border-bottom: 1px solid rgba(51,50,49,0.1);
+}
+
+.sidebar__link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 19px;
+  padding-right: 40px;
+}
+
+.sidebar__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  opacity: 0.3;
+  text-align: right;
+  
+  svg {
+    stroke: #333231;
+  }
+}
