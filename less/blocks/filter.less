@@ -28,6 +28,101 @@
   color: #22272E;
 }
 
+.filter__data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter__field {
+  position: relative;
+  
+  &::before {
+    content: "от";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 11px;
+    color: #98ACB2;
+    line-height: 40px;
+  }
+  
+  &:last-child::before {
+    content: "до";
+  }
+}
+
+.filter__input {
+  display: block;
+  width: 105px;
+  height: 40px;
+  padding-left: 35px;
+  color: #242B33;
+  border: 1px solid rgba(51, 50, 49, 0.1);
+}
+
 .filter__range {
   margin-bottom: 50px;
+  
+  .ui-slider {
+    position: relative;
+  }
+  /* Ползунок */
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: @brown;
+    border: 1px solid rgba(51, 50, 49, 0.5);
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 6px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle { 
+    top: -6px;
+    margin-left: -8px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min { 
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content { 
+    border: 1px solid rgba(51,50,49,0.2);
+    background-color: rgba(51,50,49,0.2);
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header { 
+    border: 1px solid @brown;
+    background-color: @brown;
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+    border-radius: 5px;
+  }
+  .ui-widget.ui-widget-content {
+    border: 0;
+  }
 }

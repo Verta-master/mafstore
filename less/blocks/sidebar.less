@@ -22,6 +22,50 @@
 .sidebar__item {
   position: relative;
   border-bottom: 1px solid rgba(51,50,49,0.1);
+  
+  &:hover {
+    .sidebar__link {
+      color: @brown;
+      .transition();
+    }
+    .sidebar__arrow svg {
+      stroke: @brown;
+      .transition();
+    }
+    .sidebar__drop {
+      display: block;
+    }
+  }
+}
+
+.sidebar__drop {
+  display: none;
+  .reset();
+  list-style: none;
+  position: absolute;
+  z-index: 100;
+  left: 100%;
+  top: 0;
+  width: 270px;
+  background-color: #fff;
+  box-shadow: 0px 15px 16px rgba(0, 0, 0, 0.15);
+  
+  li {
+    border-bottom: 1px solid rgba(51,50,49,0.1);
+    
+    a {
+      display: block;
+      padding: 20px;
+      padding-bottom: 19px;
+      .transition();
+      
+      &:hover,
+      &:active {
+        color: @brown;
+        .transition();
+      }
+    }
+  }
 }
 
 .sidebar__link {
@@ -29,6 +73,7 @@
   padding-top: 20px;
   padding-bottom: 19px;
   padding-right: 40px;
+  .transition();
 }
 
 .sidebar__arrow {
@@ -42,5 +87,6 @@
   
   svg {
     stroke: #333231;
+    .transition();
   }
 }
