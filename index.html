@@ -25,18 +25,25 @@
         <img src="img/images/logo.png" alt="Logo">
         <strong class="header__slogan">Мебель LOFT<br>от производителя</strong>
       </div>
-      <form action="#" class="search">
-        <input type="text" class="search__input" placeholder="Поиск">
-        <button type="submit" class="search__btn" title="Поиск">
-          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="10.1113" cy="10.207" rx="6.58906" ry="6.58906" transform="rotate(-45 10.1113 10.207)" stroke-width="1.69747"></ellipse>
-            <path d="M17.5616 17.6575L19.362 19.4579" stroke-width="2.5462" stroke-linecap="round"></path>
-          </svg>
-        </button>
-      </form>
+      <div class="header__search">
+        <button type="button" class="header__search-btn"></button>
+        <div class="header__drop">
+          <form action="#" class="search">
+            <input type="text" class="search__input" placeholder="Поиск">
+            <button type="submit" class="search__btn" title="Поиск">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="10.1113" cy="10.207" rx="6.58906" ry="6.58906" transform="rotate(-45 10.1113 10.207)" stroke-width="1.69747"></ellipse>
+                <path d="M17.5616 17.6575L19.362 19.4579" stroke-width="2.5462" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
       <div class="header__call">
-        <a href="tel:+74951165040" class="header__phone">8 (495) 116-50-40</a>
-        <a data-fancybox="" data-src="#call" href="javascript:;" class="header__order">Заказать звонок</a>
+        <div class="header__contacts">
+          <a href="tel:+74951165040" class="header__phone">8 (495) 116-50-40</a>
+          <a data-fancybox="" data-src="#call" href="javascript:;" class="header__order">Заказать звонок</a>
+        </div>
       </div>
       <div class="header__basket">
         <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
