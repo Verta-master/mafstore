@@ -1,4 +1,4 @@
-var breakpoint = window.matchMedia('(min-width: 1170px)');
+var breakpoint = window.matchMedia('(min-width: 1200px)');
 var newsSwiper;
 var breakpointChecker = function() {
   if (breakpoint.matches === true) {
@@ -21,7 +21,7 @@ var enableSwiper = function() {
     slidesPerView: 4,
     spaceBetween: 30,
     breakpoints: {
-      1170: {
+      1200: {
         slidesPerView: 3,
       },
       766: {
