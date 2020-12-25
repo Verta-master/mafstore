@@ -230,19 +230,21 @@
         
         <div class="filter">
           <p class="filter__title">Отбор по цене</p>
-          <p class="filter__subtitle">Цена</p>
-          <div class="filter__data">
-            <div class="filter__field">
-              <input type="text" id="amount-min" class="filter__input">
+          <div class="filter__drop">
+            <p class="filter__subtitle">Цена</p>
+            <div class="filter__data">
+              <div class="filter__field">
+                <input type="text" id="amount-min" class="filter__input">
+              </div>
+              <div class="filter__field">
+                <input type="text" id="amount-max" class="filter__input">
+              </div>
             </div>
-            <div class="filter__field">
-              <input type="text" id="amount-max" class="filter__input">
+            <div class="filter__range">
+              <div id="slider-range"></div>
             </div>
+            <a href="#" class="btn filter__btn">применить</a>
           </div>
-          <div class="filter__range">
-            <div id="slider-range"></div>
-          </div>
-          <a href="#" class="btn filter__btn">применить</a>
         </div>
       </div>
       
@@ -519,5 +521,22 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/range-slider.js"></script>
+  <script src="js/script.js"></script>
+  
+  <script>
+    if (window.innerWidth < 1200) {
+      $('.sidebar__title').click(function() {
+        $('.sidebar__list').slideToggle();
+      });
+      
+      $('.filter__title').click(function() {
+        $('.filter__drop').slideToggle();
+      });
+      
+      $('.sidebar__arrow').click(function() {
+        $(this).next().slideToggle();
+      });
+    }
+  </script>
 </body>
 </html>
