@@ -175,6 +175,9 @@
     height: 55px;
     bottom: auto;
   }
+  .card__info .title-3 {
+    max-width: 100%;
+  }
 }
 //----------------------------------------
 @media (max-width: 1022px) {
@@ -262,6 +265,17 @@
   .catalog__item {
     margin-right: 0;
   }
+  .card__wrap {
+    display: block;
+  }
+  .card__slider,
+  .card__info {
+    width: 100%;
+  }
+  .card__btn,
+  .card__click {
+    width: 270px;
+  }
 }
 //----------------------------------------
 @media (max-width: 766px) {
@@ -294,6 +308,7 @@
   .blog__img {
     height: 160px;
   }
+  .card,
   .blog,
   .info {
     margin-bottom: 40px;
@@ -311,6 +326,7 @@
     width: 100%;
     margin-bottom: 20px;
   }
+  .tabs__field table,
   .footer__contacts {
     width: 100%;
   }
@@ -325,6 +341,16 @@
       margin-right: 10px;
     }
   }
+  .tabs__field {
+    padding: 20px;
+  }
+  .tabs__title {
+    justify-content: space-around;
+  }
+  .tabs__name {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 //----------------------------------------
 @media (max-width: 480px) {
@@ -338,10 +364,37 @@
   .action__text {
     font-size: 14px;
   }
+  .card__btn,
+  .card__click,
   .sidebar,
   .footer__menu,
   .subscribe__btn,
   .benefits__item {
+    width: 100%;
+  }
+  .card__bottom {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .card__thumb {
+    height: 80px;
+  }
+  .card__prev,
+  .card__next {
+    top: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .card__prev {
+    left: 0;
+  }
+  .card__next {
+    right: 0;
+  }
+  .tabs__title {
+    flex-direction: column;
+  }
+  .tabs__name {
     width: 100%;
   }
 }
