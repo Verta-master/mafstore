@@ -12,3 +12,15 @@ if (window.innerWidth < 1200) {
     $(this).next().slideToggle();
   });
 }
+
+if (window.innerWidth < 1022) {
+  $('.header__call').click(function() {
+    $('.header__contacts').slideToggle();
+  });
+}
+
+if (window.innerWidth < 766) {
+  $('.header__search-btn').click(function() {
+    $('.header__drop').slideToggle();
+  });
+}
