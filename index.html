@@ -36,7 +36,7 @@
       </form>
       <div class="header__call">
         <a href="tel:+74951165040" class="header__phone">8 (495) 116-50-40</a>
-        <a href="#" class="header__order">Заказать звонок</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="header__order">Заказать звонок</a>
       </div>
       <div class="header__basket">
         <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -643,7 +643,7 @@
         <div class="footer__contacts">
           <a href="tel:+74999930784" class="footer__tel">8 (499)-993-07-84</a>
           <a href="tel:+74950039721" class="footer__tel">8 (495)-003-97-21</a>
-          <a href="#" class="btn btn--border footer__call">
+          <a data-fancybox data-src="#call" href="javascript:;" class="btn btn--border footer__call">
             <i class="fas fa-phone-alt"></i>
             <span>Заказать звонок</span>
           </a>
@@ -672,6 +672,19 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-3">Заказать звонок</p>
+    <form action="#" class="form">
+      <input type="text" class="form__input" placeholder="Ваше имя">
+      <input type="text" class="form__input" placeholder="Ваш телефон">
+      <input type="checkbox" id="checkbox" class="checkbox">
+      <label for="checkbox" class="checkbox-label">Я не робот</label>
+      <button type="submit" class="btn form__btn">Заказать</button>
+      <p class="form__comment">Ознакомлен с правилами <a href="#">пользовательсого соглашения</a></p>
+    </form>
+  </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
