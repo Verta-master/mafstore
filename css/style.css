@@ -2342,7 +2342,7 @@ h4,
 }
 .breadcrumbs__link {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 span.breadcrumbs__link {
   font-weight: 700;
@@ -2353,7 +2353,7 @@ a.breadcrumbs__link {
 a.breadcrumbs__link::after {
   content: "/";
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
   margin-left: 10px;
 }
 a.breadcrumbs__link:hover,
@@ -2528,6 +2528,9 @@ a.breadcrumbs__link:active {
     height: 55px;
     bottom: auto;
   }
+  .card__info .title-3 {
+    max-width: 100%;
+  }
 }
 @media (max-width: 1022px) {
   .header__wrap {
@@ -2630,6 +2633,17 @@ a.breadcrumbs__link:active {
   .catalog__item {
     margin-right: 0;
   }
+  .card__wrap {
+    display: block;
+  }
+  .card__slider,
+  .card__info {
+    width: 100%;
+  }
+  .card__btn,
+  .card__click {
+    width: 270px;
+  }
 }
 @media (max-width: 766px) {
   .header__wrap {
@@ -2666,6 +2680,7 @@ a.breadcrumbs__link:active {
   .blog__img {
     height: 160px;
   }
+  .card,
   .blog,
   .info {
     margin-bottom: 40px;
@@ -2686,6 +2701,7 @@ a.breadcrumbs__link:active {
     width: 100%;
     margin-bottom: 20px;
   }
+  .tabs__field table,
   .footer__contacts {
     width: 100%;
   }
@@ -2698,6 +2714,17 @@ a.breadcrumbs__link:active {
   .footer__bottom .social__item {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .tabs__field {
+    padding: 20px;
+  }
+  .tabs__title {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .tabs__name {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 480px) {
@@ -2712,10 +2739,40 @@ a.breadcrumbs__link:active {
   .action__text {
     font-size: 14px;
   }
+  .card__btn,
+  .card__click,
   .sidebar,
   .footer__menu,
   .subscribe__btn,
   .benefits__item {
+    width: 100%;
+  }
+  .card__bottom {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .card__thumb {
+    height: 80px;
+  }
+  .card__prev,
+  .card__next {
+    top: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .card__prev {
+    left: 0;
+  }
+  .card__next {
+    right: 0;
+  }
+  .tabs__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tabs__name {
     width: 100%;
   }
 }
