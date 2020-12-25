@@ -21,17 +21,52 @@
 
 .sidebar__item {
   position: relative;
+  z-index: 2;
   border-bottom: 1px solid rgba(51,50,49,0.1);
   
-  &:hover {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(90deg, #A68563 0%, rgba(166, 133, 99, 0) 98%);
+    opacity: 0;
+    .transition();
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background-color: @brown;
+    opacity: 0;
+    .transition();
+  }
+  
+  &:hover,
+  &:active,
+  &--active {
+    &::after {
+      opacity: 0.3;
+      .transition();
+    }
+    &::before {
+      opacity: 1;
+      .transition();
+    }
     .sidebar__link {
-      color: @brown;
+      padding-left: 20px;
       .transition();
     }
-    .sidebar__arrow svg {
-      stroke: @brown;
-      .transition();
-    }
+  }
+  
+  &:hover {
     .sidebar__drop {
       display: block;
     }

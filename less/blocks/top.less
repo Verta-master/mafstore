@@ -5,4 +5,21 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  
+  &--internal {
+    padding-bottom: 75px;
+    
+    h1,
+    .title {
+      padding-bottom: 15px;
+    
+      &::after {
+        display: none;
+      }
+    }
+  }
+  
+  &--card {
+    padding-bottom: 70px;
+  }
 }
