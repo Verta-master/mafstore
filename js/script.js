@@ -5,7 +5,8 @@ $('.menu__btn').click(function() {
 })
 
 if (window.innerWidth < 1200) {
-  $('.menu__open').click(function() {
+  $('.menu__catalog').click(function() {
+    event.preventDefault();
     $('.menu__dropdown').slideToggle();
   });
   $('.footer__title').click(function() {
